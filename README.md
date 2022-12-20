@@ -108,4 +108,5 @@ The implementation from `torch-graph-force` **without GPU acceleration** is 1.5x
 ![CPU Benchmark](/assets/cpu-benchmark.jpg)
 
 GPU accelerated `torch-graph-force` can compute layouts of graphs with 100k nodes within minutes. The benchmark was conducted with Tesla P100.
+
 ![GPU Benchmark](/assets/gpu-benchmark.jpg)
