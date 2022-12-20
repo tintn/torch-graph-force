@@ -14,6 +14,8 @@ class SpringLayout(nn.Module):
         self.threshold = threshold
 
         if pos is not None:
+            if isinstance(pos, np.ndarray):
+                pos = torch.tensor(pos, dtype=torch.float64)
             assert pos.size(0) == self.n_nodes
             assert pos.size(1) == self.ndim
             self.pos = nn.Parameter(pos.clone().type(torch.float64))
@@ -83,7 +85,6 @@ class SpringLayout(nn.Module):
             True if the norm of delta_pos is lower than threshold.
             Otherwise, return False
         """
-        print(self.t, self.dt)
         assert self.t > 1e-10, (
             f"The number of update calls"
             f" might have exceeded #iterations ({self.iterations})"
