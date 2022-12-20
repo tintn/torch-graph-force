@@ -101,7 +101,7 @@ pos = torch_graph_force.spring_layout(
     layout_config={"pos": init_pos}
 )
 ```
-## Benchmark
+## Benchmarks
 
 The implementation from `torch-graph-force` **without GPU acceleration** is 1.5x faster than Networkx's implementation.
 
@@ -110,3 +110,5 @@ The implementation from `torch-graph-force` **without GPU acceleration** is 1.5x
 GPU accelerated `torch-graph-force` can compute layouts of graphs with 100k nodes within minutes. The benchmark was conducted with Tesla P100.
 
 ![GPU Benchmark](/assets/gpu-benchmark.jpg)
+
+Code for the benchmarks can be found [here](/torch_graph_force/benchmark.py)
