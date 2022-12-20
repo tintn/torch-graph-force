@@ -6,7 +6,7 @@ The aim of this project is to speed up the process of obtaining low-dimensional 
 
 ## Install
 
-- Install PyTorch (follow [official instuctions](https://pytorch.org/get-started/locally))
+- Install PyTorch (follow [official instructions](https://pytorch.org/get-started/locally))
 - Install `torch-force-graph`:
 ```shell
 pip install git+https://github.com/tintn/torch-force-graph.git
