@@ -20,3 +20,6 @@ classifiers = [
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements/build.txt"]}
+
+[tool.setuptools]
+packages = ["torch_graph_force"]
