@@ -18,7 +18,7 @@ pip install git+https://github.com/tintn/torch-graph-force.git
 
 The dataset can be created from a dataframe, an edgelist or Networkx Graph using `from_pandas_dataframe`, `from_edgelist`, or `from_networkx` respectively. `from_pandas_dataframe` is the recommended way as it's more efficient compared to other methods.
 
-If the node IDs are consecutive integers starting from 0, the dataset can be created as the following example:
+If the node IDs are consecutive integers starting from 0:
 
 ```python
 import pandas as pd
@@ -90,7 +90,7 @@ default_layout_config = {
 }
 ```
 
-Use the `layout_config` argument to change the parameters if needed:
+Use the `layout_config` argument to change the parameters if needed. The example below provides intial positions for the layout model:
 ```python
 n_nodes = len(ds)
 n_dim = 2
