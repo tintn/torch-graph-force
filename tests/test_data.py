@@ -3,7 +3,7 @@ import networkx as nx
 import numpy as np
 
 
-from torch_force_graph import from_edgelist, from_networkx, from_pandas_dataframe
+from torch_graph_force import from_edgelist, from_networkx, from_pandas_dataframe
 
 
 @pytest.fixture

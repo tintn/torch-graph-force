@@ -2,8 +2,8 @@ import networkx as nx
 import numpy as np
 import torch
 
-from torch_force_graph import from_pandas_dataframe
-from torch_force_graph import spring_layout
+from torch_graph_force import from_pandas_dataframe
+from torch_graph_force import spring_layout
 
 
 def test_correctness():

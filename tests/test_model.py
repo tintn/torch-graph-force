@@ -1,6 +1,6 @@
 import pytest
 
-from torch_force_graph.model import SpringLayout
+from torch_graph_force.model import SpringLayout
 
 
 def test_iterations():
