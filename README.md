@@ -22,7 +22,7 @@ If the node IDs are consecutive integers starting from 0, the dataset can be cre
 
 ```python
 import pandas as pd
-import torch_force_graph
+import torch_graph_force
 
 # The first argument is a dataframe of edges with at least two columns for source and target nodes.
 # By default, column names "source", "target" and "weight" are taken as source nodes, target nodes and edge weights.
@@ -31,7 +31,7 @@ df = pd.DataFrame([[0, 1], [1, 2], [2, 3]], columns=['source', 'target'])
 # The second argument is the number of nodes in case the node IDs are consecutive integers starting from 0.
 n_nodes = 4
 # Create a GraphDataset for the graph
-ds = torch_force_graph.from_pandas_dataframe(
+ds = torch_graph_force.from_pandas_dataframe(
     df, n_nodes
 )
 ```
@@ -39,13 +39,13 @@ ds = torch_force_graph.from_pandas_dataframe(
 If the node IDs are not consecutive integers, a list of node IDs must be provided:
 ```python
 import pandas as pd
-import torch_force_graph
+import torch_graph_force
 
 df = pd.DataFrame([["A", "B"], ["B", "C"], ["C", "D"]], columns=['source', 'target'])
 # Order of the nodes in "nodes" is used to map the node IDs to node indices.
 nodes = ["A", "B", "C", "D"]
 
-ds = torch_force_graph.from_pandas_dataframe(
+ds = torch_graph_force.from_pandas_dataframe(
     df, nodes
 )
 # the dataset's order follows the order of the provided list of nodes. In this example, calling  ds[0] will return the data for node "A" and ds[1] for node "B"
@@ -58,7 +58,7 @@ Once having the graph dataset ready, we can feed the dataset to `spring_layout` 
 
 ```python
 
-pos = torch_force_graph.spring_layout(
+pos = torch_graph_force.spring_layout(
     ds
 )
 # pos is a numpy array of size (n_nodes, n_dim)
@@ -96,7 +96,7 @@ n_nodes = len(ds)
 n_dim = 2
 # Generate initial positions for the nodes
 init_pos = np.random.rand(n_nodes, n_dim)
-pos = torch_force_graph.spring_layout(
+pos = torch_graph_force.spring_layout(
     ds,
     layout_config={"pos": init_pos}
 )
