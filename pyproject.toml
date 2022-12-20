@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torch_graph_force"
+version = "0.1.0"
+description = "Force-directed layouts for Large Graphs with GPU acceleration"
+keywords = ["graph", "layout", "force-directed", "pytorch"]
+authors = [ { email = "trung.tin.nguyen0309@gmail.com", name = "Tin Nguyen" } ]
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["dependencies"]
+classifiers = [
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements/build.txt"]}
