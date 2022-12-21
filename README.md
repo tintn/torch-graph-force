@@ -1,4 +1,4 @@
-# torch-graph-force [WIP]
+# torch-graph-force
 
 A PyTorch-based library for embedding large graphs to low-dimensional space using force-directed layouts with GPU acceleration.
 
@@ -8,8 +8,8 @@ The aim of this project is to speed up the process of obtaining low-dimensional 
 
 - Install PyTorch (follow [official instructions](https://pytorch.org/get-started/locally))
 - Install `torch-graph-force`:
-```shell
-pip install git+https://github.com/tintn/torch-graph-force.git
+```bash
+pip install torch-graph-force
 ```
 
 ## Usage
