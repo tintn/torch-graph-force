@@ -1,4 +1,4 @@
-# torch-graph-force
+# torch-graph-force [WIP]
 
 A PyTorch-based library for embedding large graphs to low-dimensional space using force-directed layouts with GPU acceleration.
 
